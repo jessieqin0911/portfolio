@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jessie Qin · Freelance Social Media & Canva Design</title>
+<meta name="description" content="Social posts, menus, flyers and Canva templates for small businesses in Metro Vancouver. Send an inquiry for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Gelasio:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141414;--soft:#5F5F5B;--mute:#8C8C86;--bg:#FAFAF7;--panel:#fff;--line:#E6E4DE;--accent:#1F4E5F;--accent-soft:#E8EFF1;--warm:#B8572F}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+nav{position:sticky;top:0;background:rgba(250,250,247,.88);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+nav .logo{font-family:'Gelasio',serif;font-weight:600;font-size:19px;text-decoration:none;letter-spacing:-.01em}
+nav .logo span{color:var(--mute);font-family:'DM Sans';font-weight:400;font-size:14px;margin-left:8px}
+nav .links a{margin-left:28px;text-decoration:none;font-size:14px;color:var(--soft);transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.btn-sm{background:var(--ink);color:#fff;padding:9px 18px;border-radius:8px}
+h1,h2,h3{font-family:'Gelasio',serif;font-weight:600;letter-spacing:-.015em;line-height:1.12}
+h1{font-size:clamp(42px,6.2vw,72px)}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+h2{font-size:clamp(30px,3.8vw,44px);margin-bottom:14px}
+.kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:700;color:var(--mute);margin-bottom:18px}
+.kicker:before{content:"";width:22px;height:1px;background:var(--mute)}
+.lead{font-size:18px;color:var(--soft);max-width:600px}
+section{padding:104px 0;border-top:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;padding:14px 24px;border-radius:8px;border:1px solid var(--ink);font:inherit;font-size:15px;font-weight:500;cursor:pointer;transition:background .15s,color .15s}
+.btn:hover{background:var(--accent);border-color:var(--accent)}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn.ghost{background:transparent;color:var(--ink);margin-left:10px}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+
+/* hero */
+.hero{padding:120px 0 96px}
+.hero .lead{margin:28px 0 40px;font-size:19px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--soft);border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px;margin-bottom:28px}
+.status i{width:8px;height:8px;border-radius:50%;background:#2E9E6A;box-shadow:0 0 0 4px rgba(46,158,106,.15)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:80px;border-top:1px solid var(--line)}
+.facts div{padding:24px 24px 0 0}
+.facts div+div{padding-left:24px;border-left:1px solid var(--line)}
+.facts b{display:block;font-family:'Gelasio',serif;font-size:22px;font-weight:600}
+.facts span{font-size:14px;color:var(--soft)}
+
+/* approach */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px}
+.three h3{font-size:21px;margin-bottom:10px}
+.three p{color:var(--soft);font-size:15.5px}
+.num{font-size:13px;color:var(--mute);font-weight:500;margin-bottom:16px;letter-spacing:.05em}
+
+/* services */
+.svc-list{margin-top:56px;border-top:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:60px 1fr 1.3fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.svc .n{font-size:13px;color:var(--mute)}
+.svc h3{font-size:22px}
+.svc p{color:var(--soft);font-size:15.5px}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px}
+.plan{border:1px solid var(--line);border-radius:14px;padding:36px;background:var(--panel);display:flex;flex-direction:column;position:relative}
+.plan.feature{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plan .badge{position:absolute;top:36px;right:36px;font-size:11px;font-weight:700;letter-spacing:.12em;color:#9FC3CF}
+.plan h3{font-size:22px}
+.plan .desc{font-size:14.5px;color:var(--soft);margin-top:4px}
+.plan.feature .desc,.plan.feature li,.plan.feature .price small{color:#B9B9B4}
+.price{font-family:'Gelasio',serif;font-size:46px;margin:22px 0 22px;padding-bottom:22px;border-bottom:1px solid var(--line);letter-spacing:-.02em}
+.plan.feature .price{border-color:#2E2E2E}
+.price small{font-family:'DM Sans';font-size:15px;color:var(--mute);letter-spacing:0}
+.plan ul{list-style:none;flex:1}
+.plan li{padding:7px 0 7px 26px;position:relative;color:var(--soft);font-size:15px}
+.plan li:before{content:"";position:absolute;left:2px;top:15px;width:12px;height:6px;border-left:1.5px solid var(--accent);border-bottom:1.5px solid var(--accent);transform:rotate(-45deg)}
+.plan.feature li:before{border-color:#9FC3CF}
+.plan .pick{margin-top:28px;justify-content:center;background:transparent;color:inherit;border:1px solid currentColor}
+.plan.feature .pick{background:#fff;color:var(--ink);border-color:#fff}
+.plan .pick:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.subhead{display:flex;justify-content:space-between;align-items:baseline;margin-top:72px;margin-bottom:8px}
+.subhead h3{font-size:24px}
+.subhead span{font-size:14px;color:var(--mute)}
+.alacarte{border-top:1px solid var(--line)}
+.alacarte>div{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.alacarte .t{font-weight:500}
+.alacarte small{color:var(--mute);margin-left:12px;font-size:14px}
+.alacarte .p{font-family:'Gelasio',serif;font-size:19px;white-space:nowrap;margin-left:16px}
+.fine{font-size:13.5px;color:var(--mute);margin-top:18px}
+.offer{margin-top:32px;display:flex;gap:16px;align-items:center;background:var(--accent-soft);border-radius:12px;padding:18px 22px;font-size:15px;color:#24434E}
+.offer b{white-space:nowrap}
+
+/* founding pricing */
+.founding-banner{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin-top:40px;padding:22px 26px;border:1px solid var(--accent);border-radius:12px;background:var(--accent-soft)}
+.founding-banner .spots{font-family:'Gelasio',serif;font-size:34px;line-height:1;color:var(--accent);text-align:center}
+.founding-banner .spots small{display:block;font-family:'DM Sans';font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4A6A75;margin-top:6px}
+.founding-banner b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+.founding-banner p{color:#3E5761;font-size:14.5px}
+.founding-banner .lock{font-size:13px;color:#3E5761;text-align:right;white-space:nowrap}
+.was{font-family:'DM Sans';font-size:17px;color:var(--mute);text-decoration:line-through;margin-left:10px;letter-spacing:0}
+.plan.feature .was{color:#8A8A85}
+.tagline{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.plan.feature .tagline{color:#9FC3CF}
+.alacarte .p .was{font-size:14px;margin:0 8px 0 0}
+.terms{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid var(--line);padding-top:24px}
+.terms div{font-size:14px;color:var(--soft)}
+.terms b{display:block;color:var(--ink);font-weight:500;margin-bottom:2px}
+@media(max-width:700px){.founding-banner{grid-template-columns:1fr;text-align:left}.founding-banner .spots,.founding-banner .lock{text-align:left}.terms{grid-template-columns:1fr}}
+
+.oneoff{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:20px;padding:28px 36px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.oneoff h3{font-size:22px;margin-bottom:4px}
+.oneoff p{color:var(--soft);font-size:15px}
+.oneoff .from{font-family:'Gelasio',serif;font-size:36px;text-align:right;white-space:nowrap;line-height:1.1}
+.oneoff .from small{display:block;font-family:'DM Sans';font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+@media(max-width:700px){.oneoff{flex-direction:column;align-items:flex-start}.oneoff .from{text-align:left}}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid var(--ink)}
+.steps>div{padding:28px 24px 0 0;position:relative}
+.steps>div:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--ink)}
+.steps h3{font-size:19px;margin:6px 0 8px}
+.steps p{font-size:15px;color:var(--soft)}
+
+/* form */
+.inquiry{background:var(--panel)}
+.inquiry .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.inquiry aside{position:sticky;top:110px}
+.inquiry aside .lead{font-size:17px;margin-top:6px}
+.inquiry aside ul{list-style:none;margin-top:36px;border-top:1px solid var(--line)}
+.inquiry aside li{padding:16px 0;border-bottom:1px solid var(--line);color:var(--soft);font-size:14.5px}
+.inquiry aside li b{color:var(--ink);display:block;font-weight:500;margin-bottom:2px}
+form{display:block}
+fieldset{border:0;margin-bottom:40px}
+legend{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--line);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:20px}
+label.l{display:block;font-weight:500;font-size:14px;margin-bottom:8px}
+label.l .opt{color:var(--mute);font-weight:400}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{width:100%;font:inherit;font-size:15.5px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);transition:border-color .15s,box-shadow .15s,background .15s;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--soft) 50%),linear-gradient(135deg,var(--soft) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:36px}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(31,78,95,.12)}
+textarea{min-height:140px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:var(--bg);color:var(--soft);transition:all .15s;user-select:none}
+.chips span:hover{border-color:var(--mute);color:var(--ink)}
+.chips input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chips input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.err{color:#B3261E;font-size:13px;margin-top:6px;display:none}
+.field.bad .err{display:block}
+.field.bad input,.field.bad textarea{border-color:#B3261E}
+.hp{position:absolute;left:-9999px}
+.submit-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-top:8px}
+.submit-row small{color:var(--mute);font-size:13.5px}
+.thanks{display:none;padding:80px 0;border-top:1px solid var(--line)}
+.thanks .ok{width:52px;height:52px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.thanks h3{font-size:32px;margin-bottom:10px}
+.thanks p{color:var(--soft)}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+details:first-child{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:500;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--mute);font-size:22px;line-height:1;font-weight:300}
+details[open] summary:after{content:"–"}
+details p{color:var(--soft);margin-top:10px;font-size:15.5px;max-width:560px}
+
+footer{padding:36px 0;color:var(--mute);font-size:13.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ink)}
+
+@media(max-width:900px){
+ .three,.plans,.inquiry .grid,.faq-grid{grid-template-columns:1fr;gap:32px}
+ .svc{grid-template-columns:40px 1fr}.svc p{grid-column:2}
+ .steps{grid-template-columns:1fr 1fr;row-gap:36px}
+ .facts{grid-template-columns:1fr}.facts div+div{border-left:0;padding-left:0;border-top:1px solid var(--line);margin-top:20px}
+ .inquiry aside{position:static}
+ nav .links a:not(.btn-sm):not(.back){display:none}
+ nav .logo span{display:none}
+ nav .links a{margin-left:16px}
+ nav .links a.btn-sm{white-space:nowrap}
+ section{padding:80px 0}.hero{padding:80px 0 64px}
+}
+@media(max-width:560px){.steps,.row{grid-template-columns:1fr}.btn.ghost{margin:12px 0 0}.offer{flex-direction:column;align-items:flex-start;gap:4px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Jessie Qin<span>Social &amp; Canva Design</span></a>
+  <div class="links">
+    <a class="back" href="../">← Portfolio</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">How it works</a><a href="#faq">FAQ</a>
+    <a class="btn-sm" href="#inquiry">Get a quote</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="status"><i></i>Founding client rates · Metro Vancouver</div>
+  <h1>Social media &amp; design<br>for local businesses that<br><em>deserve to be noticed.</em></h1>
+  <p class="lead">On-brand social posts, menus, flyers and Canva templates for cafés, pet businesses, studios and local shops, with the copy written by a marketer who knows what makes people act.</p>
+  <a class="btn" href="#inquiry">Start an inquiry <span aria-hidden="true">→</span></a><a class="btn ghost" href="#pricing">View pricing</a>
+  <div class="facts">
+    <div><b>Free intro call</b><span>15 minutes to talk through your goals</span></div>
+    <div><b>2-day replies</b><span>Ideas and a quote within 2 business days</span></div>
+    <div><b>Yours to edit</b><span>Every design delivered as a Canva file</span></div>
+  </div>
+</div></header>
+
+<section id="approach"><div class="wrap">
+  <div class="kicker">Approach</div>
+  <h2>Design <em>and</em> the words that sell it.</h2>
+  <div class="three">
+    <div><div class="num">01</div><h3>Marketing-led design</h3><p>My background is in digital and customer marketing: campaigns, email and social content built to get people to click, book and buy. Every design comes with copy that works just as hard.</p></div>
+    <div><div class="num">02</div><h3>Built in Canva, so you can edit it</h3><p>You can update a price, swap a photo or reuse a template yourself. No designer needed for small changes.</p></div>
+    <div><div class="num">03</div><h3>Local and easy to work with</h3><p>Clear pricing, quick replies and no jargon. I'm based in Metro Vancouver and happy to meet for coffee.</p></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="kicker">Services</div>
+  <h2>What I can make for you</h2>
+  <div class="svc-list">
+    <div class="svc"><span class="n">01</span><h3>Social media posts</h3><p>Feed posts, carousels and stories for Instagram and Facebook: promos, events, launches and hiring.</p></div>
+    <div class="svc"><span class="n">02</span><h3>Ongoing social support</h3><p>Regular posts, captions and quick updates as you need them, billed hourly with no long-term commitment.</p></div>
+    <div class="svc"><span class="n">03</span><h3>Menus &amp; price lists</h3><p>In-store and digital menus, service lists and seasonal specials that are easy to read and update.</p></div>
+    <div class="svc"><span class="n">04</span><h3>Flyers &amp; posters</h3><p>Event, opening and promo pieces, print-ready plus a version sized for social.</p></div>
+    <div class="svc"><span class="n">05</span><h3>Canva template kits</h3><p>A set of branded templates you can reuse indefinitely: swap the text and photos and post.</p></div>
+    <div class="svc"><span class="n">06</span><h3>Captions &amp; copy</h3><p>Captions, promo copy and short blurbs written in your brand's voice.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <div class="kicker">Pricing</div>
+  <h2>Simple pricing, <em>no surprises.</em></h2>
+  <p class="lead">All prices in CAD. Every project includes one round of revisions and the editable Canva file.</p>
+  <div class="founding-banner">
+    <div class="spots">5<small>spots</small></div>
+    <div><b>Founding client rates</b><p>Reduced rates for my first 5 clients, in exchange for a testimonial and permission to feature the work.</p></div>
+    
+  </div>
+  <div class="plans">
+    <div class="plan">
+      <h3>By project</h3>
+      <p class="desc">A clear, fixed quote before I start.</p>
+      <span class="tagline">Founding rate</span><div class="price"><small>from&nbsp;</small>$50<span class="was">$75</span></div>
+      <ul>
+        <li>Social posts &amp; stories</li>
+        <li>Flyers &amp; posters</li>
+        <li>Menus &amp; price lists</li>
+        <li>Canva template kits</li>
+        <li>One round of revisions + editable Canva file</li>
+      </ul>
+      <a class="btn pick" href="#inquiry" data-package="Project-based">Get a project quote</a>
+    </div>
+    <div class="plan feature">
+      <h3>Hourly</h3>
+      <p class="desc">For ongoing support and custom work.</p>
+      <span class="tagline">Founding rate</span><div class="price">$30 <small>/ hour</small><span class="was">$45</span></div>
+      <ul>
+        <li>Regular social posts &amp; captions</li>
+        <li>Updates to existing designs</li>
+        <li>Custom or mixed requests</li>
+        <li>Time estimate shared up front</li>
+        <li>No minimums, no long-term commitment</li>
+      </ul>
+      <a class="btn pick" href="#inquiry" data-package="Hourly">Book hourly work</a>
+    </div>
+  </div>
+  <p class="fine">Printing, paid ads and stock photo licences aren't included.</p>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="kicker">How it works</div>
+  <h2>From hello to posted in four steps</h2>
+  <div class="steps">
+    <div><div class="num">01</div><h3>Send an inquiry</h3><p>Fill out the short form below. It takes about 2 minutes.</p></div>
+    <div><div class="num">02</div><h3>Quick chat</h3><p>A free 15-minute call or coffee to learn about your business and goals.</p></div>
+    <div><div class="num">03</div><h3>I design</h3><p>First drafts within about a week, plus one round of edits.</p></div>
+    <div><div class="num">04</div><h3>You shine</h3><p>Final files delivered in Canva, ready to post or print.</p></div>
+  </div>
+</div></section>
+
+<section class="inquiry" id="inquiry"><div class="wrap grid">
+  <aside>
+    <div class="kicker">Project inquiry</div>
+    <h2>Let's make your business <em>look as good as it is.</em></h2>
+    <p class="lead" style="font-size:17px">Tell me a little about what you need. I'll reply within 2 business days with ideas and a quote. No commitment.</p>
+    <ul>
+      <li><b>Not sure what you need?</b>Pick "Not sure yet" and we'll figure it out together.</li>
+      <li><b>On a budget?</b>Mention it. I'm happy to suggest a smaller starting point.</li>
+      <li><b>Rather email?</b><a href="#" id="mailLink">Email me directly →</a></li>
+    </ul>
+  </aside>
+
+  <div>
+  <form id="inqForm" novalidate>
+    <fieldset>
+      <legend>About you</legend>
+      <div class="row">
+        <div class="field"><label class="l" for="name">Your name</label><input type="text" id="name" name="name" autocomplete="name" required><div class="err">Please add your name.</div></div>
+        <div class="field"><label class="l" for="business">Business name</label><input type="text" id="business" name="business" autocomplete="organization" required><div class="err">Please add your business name.</div></div>
+      </div>
+      <div class="row">
+        <div class="field"><label class="l" for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required><div class="err">Please add a valid email.</div></div>
+        <div class="field"><label class="l" for="phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label class="l" for="link">Instagram or website <span class="opt">(optional)</span></label><input type="text" id="link" name="link" placeholder="@yourbusiness or yourbusiness.com"></div>
+      <div class="field" data-group="type"><label class="l">What type of business?</label>
+        <div class="chips" role="radiogroup">
+          <label><input type="radio" name="type" value="Café / restaurant"><span>Café / restaurant</span></label>
+          <label><input type="radio" name="type" value="Pet business"><span>Pet business</span></label>
+          <label><input type="radio" name="type" value="Fitness / wellness"><span>Fitness / wellness</span></label>
+          <label><input type="radio" name="type" value="Retail / boutique"><span>Retail / boutique</span></label>
+          <label><input type="radio" name="type" value="Salon / beauty"><span>Salon / beauty</span></label>
+          <label><input type="radio" name="type" value="Other"><span>Other</span></label>
+        </div><div class="err">Please pick one.</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your project</legend>
+      <div class="field" data-group="services"><label class="l">What do you need help with? <span class="opt">(pick any)</span></label>
+        <div class="chips">
+          <label><input type="checkbox" name="services" value="Ongoing social posts"><span>Ongoing social posts</span></label>
+          <label><input type="checkbox" name="services" value="One-off social post(s)"><span>One-off post(s)</span></label>
+          <label><input type="checkbox" name="services" value="Flyer / poster"><span>Flyer / poster</span></label>
+          <label><input type="checkbox" name="services" value="Menu / price list"><span>Menu / price list</span></label>
+          <label><input type="checkbox" name="services" value="Canva template kit"><span>Template kit</span></label>
+          <label><input type="checkbox" name="services" value="Captions / copy"><span>Captions / copy</span></label>
+          <label><input type="checkbox" name="services" value="Not sure yet"><span>Not sure yet</span></label>
+        </div><div class="err">Please pick at least one.</div>
+      </div>
+      <div class="field"><label class="l" for="package">Pricing you're interested in <span class="opt">(optional)</span></label>
+        <select id="package" name="package">
+          <option value="">Choose one…</option>
+          <option>Project-based</option>
+          <option>Hourly</option>
+          <option>Not sure, let's chat</option>
+        </select>
+      </div>
+      <div class="field"><label class="l" for="details">Tell me about the project</label><textarea id="details" name="details" placeholder="What's coming up for your business? Any ideas, examples you like, or goals?" required></textarea><div class="err">A sentence or two is plenty.</div></div>
+      <div class="row">
+        <div class="field"><label class="l" for="deadline">Needed by <span class="opt">(optional)</span></label><input type="date" id="deadline" name="deadline"></div>
+        <div class="field"><label class="l" for="budget">Budget <span class="opt">(optional)</span></label>
+          <select id="budget" name="budget"><option value="">Choose one…</option><option>Under $150</option><option>$150–$500</option><option>$500–$1,000</option><option>$1,000+</option><option>Not sure yet</option></select>
+        </div>
+      </div>
+      <div class="field" data-group="assets"><label class="l">Do you have a logo, brand colours or photos? <span class="opt">(optional)</span></label>
+        <div class="chips">
+          <label><input type="radio" name="assets" value="Yes, all of them"><span>Yes, all of them</span></label>
+          <label><input type="radio" name="assets" value="Some"><span>Some</span></label>
+          <label><input type="radio" name="assets" value="Not yet"><span>Not yet</span></label>
+        </div>
+      </div>
+      <div class="field"><label class="l" for="source">How did you hear about me? <span class="opt">(optional)</span></label><input type="text" id="source" name="source"></div>
+      <input type="text" name="website_hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    </fieldset>
+
+    <div class="submit-row">
+      <button class="btn" type="submit" id="submitBtn">Send inquiry</button>
+      <small>I'll reply within 2 business days.</small>
+    </div>
+  </form>
+
+  <div class="thanks" id="thanks" role="status" aria-live="polite">
+    <div class="ok"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h3>Thank you, <span id="tyName">friend</span>.</h3>
+    <p>Your inquiry is in. I'll get back to you within 2 business days with ideas and a quote.</p>
+  </div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap faq-grid">
+  <div><div class="kicker">FAQ</div><h2>Common questions</h2></div>
+  <div><details><summary>Do I need to have Canva?</summary><p>No. A free Canva account lets you edit the files later, but I can also send you finished images and PDFs.</p></details>
+  <details><summary>Do you post for me?</summary><p>I can. Scheduling is billed at the hourly rate, or you can post the ready-made files yourself.</p></details>
+  <details><summary>What if I don't have good photos?</summary><p>We can use your phone photos, free stock images, or designs that rely on type and colour. I'll suggest what works best.</p></details>
+  <details><summary>Is there a contract?</summary><p>There's no long-term commitment. I'll send a simple written agreement before we start so we're both clear on scope and price.</p></details>
+  <details><summary>How do I pay?</summary><p>Projects are 50% up front and 50% on delivery. Hourly work is invoiced at the end of each month.</p></details></div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© <span id="yr"></span> Jessie Qin · Social media &amp; Canva design · Metro Vancouver</span>
+  <span><a href="https://jessieqin0911.github.io/portfolio/">Marketing portfolio</a> · <a href="#inquiry">Get a quote</a></span>
+</div></footer>
+
+<script>
+/* =====================================================================
+   ✏️ JESS: SETUP (see SETUP.md, step 2)
+   1. Paste your Google Form "pre-filled link" between the quotes below.
+   2. Your email is set below (split in two so it never appears on the page).
+   Until a link is pasted, "Send inquiry" opens an email instead.
+   ===================================================================== */
+const GOOGLE_FORM_PREFILLED_LINK = "";
+const YOUR_EMAIL = ["swave.jessieq", "gmail.com"].join("@"); // split so bots scraping the page can't read it
+/* ===================================================================== */
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+const mailLink = document.getElementById('mailLink');
+mailLink.addEventListener('click', e => { e.preventDefault(); location.href = 'mailto:' + YOUR_EMAIL + '?subject=Design%20inquiry'; });
+
+// Package buttons pre-select the package in the form
+document.querySelectorAll('[data-package]').forEach(b => b.addEventListener('click', () => {
+  document.getElementById('package').value = b.dataset.package;
+}));
+
+// Parse the pre-filled link: each answer you typed (e.g. "name") tells us which entry ID it is
+function formConfig() {
+  if (!GOOGLE_FORM_PREFILLED_LINK) return null;
+  try {
+    const u = new URL(GOOGLE_FORM_PREFILLED_LINK);
+    const action = u.origin + u.pathname.replace(/\/viewform$/, '/formResponse');
+    const map = {};
+    u.searchParams.forEach((v, k) => { if (k.startsWith('entry.')) map[v.trim().toLowerCase()] = k; });
+    return { action, map };
+  } catch (e) { return null; }
+}
+
+const KEYS = ['name','business','email','phone','link','type','services','package','details','deadline','budget','assets','source'];
+const form = document.getElementById('inqForm');
+
+function collect() {
+  const fd = new FormData(form), out = {};
+  KEYS.forEach(k => { out[k] = fd.getAll(k).join(', ').trim(); });
+  return out;
+}
+
+function validate(d) {
+  let ok = true;
+  const mark = (sel, bad) => { const f = form.querySelector(sel).closest('.field'); f.classList.toggle('bad', bad); if (bad) ok = false; };
+  mark('#name', !d.name);
+  mark('#business', !d.business);
+  mark('#email', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email));
+  mark('#details', !d.details);
+  const t = form.querySelector('[data-group="type"]'); t.classList.toggle('bad', !d.type); if (!d.type) ok = false;
+  const s = form.querySelector('[data-group="services"]'); s.classList.toggle('bad', !d.services); if (!d.services) ok = false;
+  if (!ok) form.querySelector('.field.bad').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  return ok;
+}
+form.addEventListener('input', e => { const f = e.target.closest('.field'); if (f) f.classList.remove('bad'); });
+
+function showThanks(name) {
+  document.getElementById('tyName').textContent = name.split(' ')[0] || 'friend';
+  form.style.display = 'none';
+  const t = document.getElementById('thanks'); t.style.display = 'block';
+  t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function emailFallback(d) {
+  const body = KEYS.filter(k => d[k]).map(k => k[0].toUpperCase() + k.slice(1) + ': ' + d[k]).join('\n');
+  location.href = 'mailto:' + YOUR_EMAIL + '?subject=' + encodeURIComponent('Design inquiry: ' + d.business) + '&body=' + encodeURIComponent(body);
+}
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (form.website_hp.value) return;            // spam bot filled the hidden field
+  const d = collect();
+  if (!validate(d)) return;
+  const cfg = formConfig();
+  if (!cfg) { emailFallback(d); return; }
+  const btn = document.getElementById('submitBtn'); btn.disabled = true; btn.textContent = 'Sending…';
+  const body = new URLSearchParams();
+  KEYS.forEach(k => { if (cfg.map[k] && d[k]) body.append(cfg.map[k], d[k]); });
+  try {
+    await fetch(cfg.action, { method: 'POST', mode: 'no-cors', body });
+    showThanks(d.name);
+  } catch (err) {
+    btn.disabled = false; btn.textContent = 'Send inquiry';
+    emailFallback(d);
+  }
+});
+</script>
+</body>
+</html>
